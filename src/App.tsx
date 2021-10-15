@@ -8,6 +8,7 @@ import "./scss/style.scss";
 import'bootswatch/dist/flatly/bootstrap.css';
 
 
+
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -15,12 +16,13 @@ const loading = (
 );
 
 class App extends Component {
+  
   render() {
     return (
       <HashRouter>
         <React.Suspense fallback={loading}>
           <BrowserRouter>
-            {!window.localStorage.getItem("loggedSoccerUser") ? (
+            {!window.localStorage.getItem("loggedLaundryUser") ? (
               <PublicRoutes />
             ) : (
               <>

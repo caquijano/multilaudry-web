@@ -13,7 +13,6 @@ import {
   CLabel,
   CSelect,
 } from "@coreui/react";
-import CIcon from "@coreui/icons-react";
 import { DocsLink } from "../../reusable";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 import { toast } from "react-toastify";

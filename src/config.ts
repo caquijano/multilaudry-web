@@ -1,3 +1,3 @@
 export default{
-    SECRET: 'clonesofascore'
+    SECRET: 'multilaundry'
 }

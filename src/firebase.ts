@@ -1,11 +1,11 @@
 export default {
-  apiKey: "AIzaSyDQszn90BN6k_D7wCveCTWvGtcFWa7VrSg",
-  authDomain: "soccerstatistics-f57ad.firebaseapp.com",
-  projectId: "soccerstatistics-f57ad",
-  storageBucket: "soccerstatistics-f57ad.appspot.com",
-  messagingSenderId: "154529001111",
-  appId: "1:154529001111:web:08f008411e32fca5fe83d2",
-  measurementId: "G-NHEESXBGF6"
+  apiKey: "AIzaSyDXR8vYKmiTnPXv1K1W-bCjhF7uUPgkbr4",
+  authDomain: "multilaudry.firebaseapp.com",
+  projectId: "multilaudry",
+  storageBucket: "multilaudry.appspot.com",
+  messagingSenderId: "390380921911",
+  appId: "1:390380921911:web:490878dd5982685d770bb2",
+  measurementId: "G-S5RFC3BQTW"
   };
 
   

@@ -1,6 +1,5 @@
 import React from 'react'
-import CIcon from '@coreui/icons-react'
-import {IoEarth} from 'react-icons/io5';
+import {IoClipboardSharp, IoEarth, IoPeople} from 'react-icons/io5';
 
 const _nav =  [
   {
@@ -13,6 +12,44 @@ const _nav =  [
     //   text: 'NEW',
     // }
   },
+  {
+      _tag: 'CSidebarNavDropdown',
+      name: 'Clientes',
+      route: '/clients',
+      icon: <IoPeople style={{marginInline:5}} /> ,
+      _children: [
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Lista de Clientes',
+          to: '/clientlist',
+        },
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Crear Cliente',
+          to: '/clientform',
+        },
+      ]
+    },
+    {
+      _tag: 'CSidebarNavDropdown',
+      name: 'Equipos',
+      route: '/equipment',
+      icon: <IoClipboardSharp style={{marginInline:5}} /> ,
+      _children: [
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Crear Equipo',
+          to: '/equipmentform',
+        },
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Lista de Equipos',
+          to: '/equipmentlist',
+        },
+        
+      ]
+    },
+
   // {
   //   _tag: 'CSidebarNavTitle',
   //   _children: ['Components']

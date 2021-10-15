@@ -3,7 +3,6 @@ import {
   CButton,
   CCard,
   CCardBody,
-  CCardFooter,
   CCol,
   CContainer,
   CForm,
@@ -87,16 +86,16 @@ const Register = () => {
           config.SECRET,
           { expiresIn: 86400 }
         );
+        toast.success("el usuario "+ user.email + " Ha sido creado con exito")
+        auth.onAuthStateChanged((response: any) => {
+      userId = response?.uid;
+      userEmail = response?.email;
+      console.log(response?.uid, response?.email);
+    });
       })
       .catch((e) => {
-        return toast.error(e);
+        toast.error(e);
       });
-
-    await auth.onAuthStateChanged((response: any) => {
-      userId = response.uid;
-      userEmail = response.email;
-      console.log(userEmail);
-    });
 
     await addDoc(collection(db,"users"),{
       Email: user.email,
@@ -104,12 +103,13 @@ const Register = () => {
       UserId: userId
     }) 
       .then(() => {
-        window.localStorage.setItem("loggedSoccerUser", JSON.stringify(token));
+        window.localStorage.setItem("loggedLaundryUser", JSON.stringify(token));
         window.location.href = "/";
         toast.success("Bienvenido");
       })
-      .catch(() => {
-        toast.error("Upps ocurrieron problemas");
+      .catch((error) => {
+        console.log(error)
+        toast.error("Upps ocurrieron problemas"+ error);
       });
   };
   
@@ -182,20 +182,6 @@ const Register = () => {
                   </CButton>
                 </CForm>
               </CCardBody>
-              <CCardFooter className="p-4">
-                <CRow>
-                  <CCol xs="12" sm="6">
-                    <CButton className="btn-facebook mb-1" block>
-                      <span>facebook</span>
-                    </CButton>
-                  </CCol>
-                  <CCol xs="12" sm="6">
-                    <CButton className="btn-twitter mb-1" block>
-                      <span>twitter</span>
-                    </CButton>
-                  </CCol>
-                </CRow>
-              </CCardFooter>
             </CCard>
           </CCol>
         </CRow>
