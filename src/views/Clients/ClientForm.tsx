@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from './Form'
 
 function ClientForm() {
     return (
         <div>
-            FormClient
+            <Form/>
         </div>
     )
 }
